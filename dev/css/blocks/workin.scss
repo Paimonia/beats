@@ -1,0 +1,16 @@
+.workin__container {
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.workin__player {
+    width:660px;
+    margin: 0 auto;
+}
+
+.workin__title {
+    text-align:center;
+    padding-bottom:40px;
+}

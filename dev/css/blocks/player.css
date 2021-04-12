@@ -1,0 +1,18 @@
+.player {
+  position: relative;
+}
+
+.player__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.player__start {
+  height: 15px;
+  width: 10px;
+  background: url(../../img/icons/play.png) left top no-repeat;
+}
