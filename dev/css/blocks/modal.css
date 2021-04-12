@@ -1,0 +1,13 @@
+.shadow {
+  background: #313131;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.modal {
+  padding: 35px 55px;
+  background: #fff;
+  text-align: center;
+}

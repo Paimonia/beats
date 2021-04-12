@@ -1,0 +1,75 @@
+.review {
+    padding: rem(42px);
+    background:#f8faf9;
+    display: none;
+    @include tablets {
+        text-align:center;
+        padding: rem(60px) rem(42px) rem(42px) rem(42px);
+    }
+    @include phones {
+        text-align:center;
+    }
+}
+
+.review.active {
+    display:flex;
+    @include tablets { 
+    display:block;
+    }
+}
+
+
+
+.review__image {
+    width:30%;
+    flex-shrink: 0;
+    margin-right: rem(38px);
+    @include tablets {
+        margin:0 auto;
+        width:20%;
+    }
+    @include phones {
+        margin:0 auto;
+    }
+}
+
+.review__img {
+    width:100%;
+}
+
+.review__content {
+    width:54%;
+    @include tablets {
+        margin:0 auto;
+        width:100%;
+    }
+    @include phones {
+        margin:0 auto;
+        width:75%;
+    }
+}
+
+.review__title, .review__name {
+    color: $black;
+    font-weight: bold;
+}
+
+.review__title {
+    font-size: rem(24px);
+    margin-top: rem(30px);
+}
+
+.review__text {
+    font-size: rem(16px);
+    margin-top: rem(25px);
+    line-height:1.2;
+    @include tablets {
+        
+    margin-top: rem(15px);
+    }
+}
+
+.review__name {
+    margin-top: rem(35px);
+}
+

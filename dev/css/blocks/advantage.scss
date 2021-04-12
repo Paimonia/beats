@@ -1,0 +1,55 @@
+.advantage {
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    @include phones {
+        flex-direction: row;
+    }
+    @include phones {
+        text-align: left;
+        align-content: center;
+        margin-bottom: rem(10px);
+    }
+}
+
+.advantage__image {
+    width: rem(128px);
+    height: rem(128px);
+    border-radius:50%;
+    background-color:#f2f5f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto  rem(23px) auto;
+    @include phones {
+        flex-shrink: 0;
+        margin-right: rem(10px);
+    }
+}
+
+
+.advantage__img {
+    width:60px;
+    height:60px;
+}
+
+.advantage__title {
+    color: $black;
+    font-weight:bold;
+    font-size:  rem(23px);
+    @include tablets {
+        font-size: rem(22px);
+    }
+    @include phones {
+        font-size: rem(26px);
+    }
+}
+
+.advantage__text {
+    font-size:  rem(16px);
+    width:90%;
+    @include tablets {
+        width:100%;
+    }
+   
+}

@@ -1,0 +1,121 @@
+.slider {
+    background: #F8FAF9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index:10;
+}
+
+
+.slider__item {
+    display: flex;
+    max-width:100%;
+    justify-content: space-between;
+    @include tablets {
+        display:block;
+    }
+}
+.slider__arrows {
+    width:100%;
+    position:relative;
+    max-width:1150px;
+    margin: 0 auto;
+    min-width:320px;
+    
+}
+.slider__container {
+    width:calc(100% - 60px);
+    max-width: 940px;
+}
+
+
+.slider__specs {
+    margin-bottom: 24px;
+    z-index: 11;
+    position:relative;
+}
+
+.slider__title {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    @include tablets {
+        font-size: 1.75rem;
+    }
+}
+.slider__text {
+    margin-bottom: 24px;
+    @include tablets {
+        width:90%;
+        margin:0 auto 24px auto;
+        font-size: 1.06rem;
+    }
+}
+.slider__col {
+    width:45%;
+    flex-shrink: 1;
+    @include tablets {
+        margin:0 auto;
+        width:95%;
+        text-align: center;
+    }
+}
+
+.slider__col--right {
+    min-width:360px;
+    @include tablets {
+        min-width:0;
+    }
+}
+.slider__image {
+    @include tablets {
+        width:306px;
+        margin: 0 auto 48px auto;
+    }
+    @include phones {
+        width:306px;
+        margin: 0 auto 48px auto;
+    }
+}
+.slider__tags {
+    display: flex;
+    margin-bottom: 24px;
+    @include tablets {
+        display: inline-flex;
+        margin:0 auto 24px auto;
+    }
+}
+.slider__wrap {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2rem;
+    color:$black;
+    @include tablets {
+        display:inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 360px;
+        width:100%;
+    }
+
+    @include phones {
+        justify-content: space-between;
+        align-items: center;
+        max-width: 315px;
+        width:100%;
+    }
+}
+
+.slider__price {
+    margin-right:10px;
+    @include tablets {
+        flex-shrink: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.slider__button {
+    max-width: 50%;
+}

@@ -1,0 +1,20 @@
+.phone {
+    display: flex;
+    font-size: rem(18px);
+    font-family: 'Play', sans-serif;
+    align-items: center;
+    &:hover {
+        color: $red;
+        transition: color 0.33s ease-out;
+    }
+    &:hover .phone__img {
+        fill:$red;
+        transition: fill 0.33s ease-out;
+    }
+}
+
+.phone__img {
+    margin-right: rem(5px);
+    height:13.78px;
+    width:14px;
+}

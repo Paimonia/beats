@@ -1,0 +1,155 @@
+.order-form {
+    display:flex;
+    @include tablets {
+        width:65%;
+        display:block;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    @include phones {
+        width:100%;
+        display:block;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    color: #fff;
+
+}
+
+.form__column {
+    flex:1;
+    margin-right: rem(26px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+    @include tablets {
+        margin-right:0;
+    }
+    @include phones {
+        margin-right:0;
+    }
+}
+
+.form__line {
+    display: flex;
+    margin-bottom: rem(10px);
+    @include phones   {
+        margin-bottom: 15px;
+    }
+}
+
+.form__line--margin {
+    margin-bottom: rem(32px);
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(16px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    width: 100%;
+    height: rem(58px);
+    border-radius:4px;
+    border:3px solid #fff;
+    font-size: rem(14px);
+    color: #000;
+    padding:0 rem(10px);
+    
+    &:focus {
+        border-color: $red;
+        transition: border-color 0.33s ease-out;
+    }
+    &:not(focus) {transition: border-color 0.33s ease-out;}
+    @include tablets {
+        height: rem(36px);
+    }
+    @include phones {
+        height: rem(40px);
+    }
+}
+
+.error {
+    border-color: $red;
+}
+.form__input--textarea {
+    resize: none;
+    height: rem(152px);
+    padding: rem(20px) rem(10px);
+    @include tablets {
+        height: rem(82px);
+    }
+    @include phones {
+        height: rem(90px);
+    }
+}
+
+.form__text {
+    font-size: rem(16px);
+    line-height:1.6;
+}
+
+.form__ctrl {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: rem(14px);
+
+    @include phones {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    
+}
+
+.order-form__radio {
+
+    margin-bottom: rem(17px);
+    @include tablets {
+        margin-bottom: rem(23px);
+    }
+
+}
+
+.order-form__checkbox {
+    margin-bottom: rem(45px);
+    @include tablets {
+        margin-bottom: rem(35px);
+    }
+}
+.order-form__radio {
+    margin-right: rem(35px);
+
+    @include phones {
+        margin-right: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.order-form__button {
+    margin-right: rem(15px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__buttons {
+    @include tablets {
+        text-align:center;
+    }
+    @include phones {
+        text-align:center;
+    }
+}

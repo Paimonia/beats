@@ -1,0 +1,21 @@
+
+
+.spec {
+    min-width:240px;
+    font-size: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    padding:10px 0 10px 56px;
+    color:black;
+    position: relative;
+    z-index: 101;
+}
+.spec__value {
+    text-align: right;
+}
+
+.spec--bluetooth {background: url(../img/slider/bluetooth.png) 16px center no-repeat;}
+.spec--road {background: url(../img/slider/road.png) 16px center no-repeat;}
+.spec--charger {background: url(../img/slider/charger.png) 16px center no-repeat;}
+.spec--kg {background: url(../img/slider/kg.png) 16px center no-repeat;}
+.spec--patent {background: url(../img/slider/patent.png) 16px center no-repeat;}

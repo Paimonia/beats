@@ -1,0 +1,51 @@
+.button {
+    padding: rem(17px) rem(40px);
+    text-align: center;
+    text-transform: uppercase;
+    color:#fff;
+    font-size: rem(16px);
+    font-weight: bold;
+    border-radius: rem(100px);
+    @include tablets {
+        padding: rem(20px) rem(40px);
+    }
+    @include phones {
+        padding: rem(25px) 0;
+        width:170px;
+        font-size: rem(19px);
+    }
+}
+
+.button--style--red {
+    background-color: $red;
+
+    &:hover {
+        background-color: $darkRed;
+        transition: background-color 0.33s ease-out;
+    }
+}
+
+.button--style--reset {
+    font-weight: normal;
+    font-size: rem(16px);
+    padding:0;
+    text-transform: none;
+
+
+    &:hover {
+        color: $red;
+        transition: color 0.33s ease-out;
+    }
+
+    @include phones {
+        color:#fff;
+    }
+    @include tablets {
+        color:#fff;
+    }
+    
+}
+
+.button--bold {
+    padding:  rem(21px)  rem(41px);
+}

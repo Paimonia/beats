@@ -1,0 +1,21 @@
+.hamburger {
+    display: none;
+    @include tablets {
+        display: block;
+    } 
+    @include phones {
+        display: block;
+    } 
+}
+.hamburger__line {
+    display: block;
+    width: rem(26px);
+    height: rem(4.33px);
+    background-color: #000;
+    border-radius:3px;
+    margin-bottom: 5px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

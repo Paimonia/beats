@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.slick-prev,
+.slick-next {
+    position:absolute;
+    width:15px;
+    height:29px;
+    top:0;
+    bottom:0;
+    margin: auto;
+    @include tablets {
+        margin:0;
+        top:138.5px;
+
+    }
+}
+
+.slick-prev {
+    left:-25px;
+    font-size:0;
+    background: url("../img/slider/left-arr.png") left top no-repeat;
+    @include tablets {
+        left:10%;
+        
+    }
+    @include phones {
+        left:4%;
+    }
+}
+
+.slick-next {
+    right:-25px;
+    font-size:0;
+    background: url("../img/slider/right-arr.png") left top no-repeat;
+    @include tablets {
+        right:10%;
+        
+    }
+    @include phones {
+        right:4%;
+    }
+}
+
+/* Dots */

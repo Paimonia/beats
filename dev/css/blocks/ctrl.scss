@@ -1,0 +1,63 @@
+.radio {
+    display: flex;
+    cursor:pointer;
+    line-height:1.785;
+
+}
+
+.radio__inp {
+    display: none;
+}
+
+.radio__visible {
+    width: rem(25px);
+    height: rem(25px);
+    background: #fff;
+    position:relative;
+    border-radius:50%;
+    margin-right: rem(10px);
+   
+}
+
+.radio__inp:checked + .radio__visible:before {
+    content: "";
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+    background: $red;
+    width: rem(13px);
+    height: rem(13px);
+    border-radius:50%;
+}
+
+.checkbox {
+    display: flex;
+    cursor:pointer;
+    line-height:1.785;
+}
+
+.checkbox__inp {
+    display: none;
+}
+
+.checkbox__visible {
+    width: rem(25px);
+    height: rem(25px);
+    background: #fff;
+    position:relative;
+    border-radius:4px;
+    margin-right: rem(10px);
+   
+}
+
+.checkbox__inp:checked + .checkbox__visible:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin:auto;
+    background: url('../img/form/check.svg') center center no-repeat;
+}

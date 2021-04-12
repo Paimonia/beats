@@ -1,0 +1,55 @@
+.navigation {
+
+    position:fixed;
+    right:5%; 
+    top:0;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    align-content:center;
+    z-index:10;
+
+    @include tablets {
+        display:none;
+    }
+    @include phones {
+        display:none;
+    }
+
+}
+
+.navigation__item {
+    margin-bottom: rem(6px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.navigation__link {
+    width: rem(15px);
+    height: rem(15px);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    position:relative;
+    display:block;
+
+    &::before {
+        content: "";
+        width: rem(5px);
+        height: rem(5px);
+        position:absolute;
+        left:0; right:0; top:0; bottom:0; margin:auto;
+        border-radius: 50%;
+        background-color: rgb(123, 123, 123);
+        display:block;
+    }
+    &--active:before, &:hover:before {
+        background-color: $red;
+        transition: 0.33s ease-out;
+    }
+    &:hover, &--active {
+        border-color: $red;
+        transition: 0.33s ease-out;
+    }
+}

@@ -1,0 +1,35 @@
+.socials__list {
+    display:flex;
+}
+
+.socials__img {
+    width:rem(30px);
+    height: rem(30px);
+    
+
+}
+
+.socials__img {
+    
+    
+    &:hover {
+        fill:$black;
+        transition: fill 0.3s ease-in;
+    }
+    fill:#b3b3b3;
+}
+
+
+.socials__item {
+    margin-right: rem(10px);
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include phones {
+        margin-right: rem(14px);
+    &:last-child {
+        margin-right: 0;
+    }
+    }
+}

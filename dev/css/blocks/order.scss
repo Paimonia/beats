@@ -1,0 +1,32 @@
+.order {
+    background: url('../img/form/cta.png') center bottom no-repeat rgb(22, 22, 22);
+    background-size: 100% auto;
+    padding-top: rem(70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    @include tablets {
+        background-size: auto 100%;
+    }
+
+    @include phones {
+        background-size: auto 100%;
+    }
+   
+    
+}
+
+.order__title {
+    text-align: center;
+    margin-bottom: rem(60px);
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+    @include phones {
+        font-size: rem(36px);
+        
+        margin-bottom: rem(46px);
+    }
+}

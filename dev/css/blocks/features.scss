@@ -1,0 +1,22 @@
+.features {
+    margin-top: rem(70px);
+    @include tablets {
+        display:none;
+    }
+    @include phones {
+        display:none;
+    }
+}
+
+.features__list {
+    display: flex;
+}
+
+.features__item {
+    
+    margin-right: rem(10px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,131 @@
+html {
+    font-size: $fontsize;
+
+    @include tablets {
+        font-size: $fontsize - 1px;
+    }
+
+    @include phones {
+        font-size: $fontsize - 2px;
+    }
+}
+
+
+
+body {
+    font-family: 'Play', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.42;
+    color:$grey;
+    margin:0;
+    padding:0;
+    //height:100%;
+    //overflow: hidden;
+}
+
+* {box-sizing:border-box; outline:none;
+    -webkit-tap-highlight-color: transparent;}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+img {
+    max-width: 100%; 
+    display: block;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+ul li {list-style-type: none;}
+
+h1, h2, h3, h4, h5, h6 {margin:0; font-weight:700;}
+
+p {margin:0;}
+
+button {
+    border:0;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+svg {
+    max-width:100%;
+    max-height:100%;
+}
+
+.section {
+
+    height:100vh;
+    min-height: rem(650px);
+
+    @include tablets {
+        min-height: rem(1000px);
+    }
+    @include phones {
+        min-height: 800px;
+    }
+}
+
+.hidden {
+    overflow: hidden;
+}
+.section--big {
+    @include phones {
+        min-height: rem(950px);
+    }
+}
+.container {
+    width:95%;
+    min-width:320px;
+    max-width: $container; 
+    margin: 0 auto;
+}
+
+
+.wrapper {
+    width:100%;
+    min-width:320px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    //height:100%;
+    //overflow: hidden;
+    
+}
+
+.maincontent {
+    //height:100vh;
+    transition: transform 0.6s;
+    will-change: transform;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.title--style--main {
+    font-size:2.66rem;
+    line-height:1.1;
+    color: $black;
+    @include phones {
+        font-size: rem(32px);
+    }
+}
+
+.title--style--light {
+    font-size:2.66rem;
+    line-height:1.1;
+    color: #fff;
+    @include phones {
+        font-size: rem(32px);
+    }
+}
+
+

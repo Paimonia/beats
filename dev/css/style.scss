@@ -1,0 +1,45 @@
+$container: 940px;
+$fontsize: 18px;
+$red: #E01F3D;
+$darkRed: #CA1B36;
+$dark: #2C2C2C;
+$black: #292929;
+$grey: #666;
+$phones: 480px;
+$tablets: 768px;
+
+
+
+@import "./layout/normalize.css";
+@import "./media.scss";
+@import "./layout/default.scss";
+@import "./blocks/phone.scss";
+@import "./blocks/header.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/main-menu.scss";
+@import "./blocks/button.scss";
+@import "./blocks/features.scss";
+@import "./blocks/feature.scss";
+@import "./blocks/why.scss";
+@import "./blocks/advantage.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/review.scss";
+@import "./blocks/avatar.scss";
+@import "./blocks/order.scss";
+@import "./blocks/order-form.scss";
+@import "./blocks/ctrl.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/hamburger.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/map.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/specs.scss";
+@import "./blocks/spec.scss";
+@import "./blocks/item-tag.scss";
+@import "./blocks/slick.scss";
+@import "./blocks/slick-theme.scss";
+@import "./blocks/modal.scss";
+@import "./blocks/team.scss";
+@import "./blocks/products.scss";
+
