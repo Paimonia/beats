@@ -1,16 +1,16 @@
 const validateFields = (form, fieldsArray) => {
     fieldsArray.forEach((field) => {
-      field.removeClass("input-error");
+      field.removeClass("error");
       if (field.val().trim() === "") {
-        field.addClass("input-error");
+        field.addClass("error");
       }
     });
   
-    const errorFields = form.find(".input-error");
+    const errorFields = form.find(".error");
   
     return errorFields.length === 0;
   };
-  
+
   $(".form").submit((e) => {
     e.preventDefault();
   
@@ -24,7 +24,7 @@ const validateFields = (form, fieldsArray) => {
     const content = modal.find(".modal__content");
   
     modal.removeClass("error-modal");
-  
+     
     const isValid = validateFields(form, [name, phone, comment, to]);
   
     if (isValid) {
