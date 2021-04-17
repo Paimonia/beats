@@ -1,6 +1,7 @@
 @import "./layout/normalize.css";
 html {
   font-size: 18px;
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   html {
@@ -71,29 +72,11 @@ svg {
 }
 
 .section {
-  height: 100vh;
-  min-height: 36.1111111111rem;
-}
-@media screen and (max-width: 768px) {
-  .section {
-    min-height: 55.5555555556rem;
-    height: 100%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section {
-    min-height: 800px;
-  }
+  height: 100%;
 }
 
 .hidden {
   overflow: hidden;
-}
-
-@media screen and (max-width: 480px) {
-  .section--big {
-    min-height: 52.7777777778rem;
-  }
 }
 
 .container {
@@ -114,14 +97,9 @@ svg {
 }
 
 .maincontent {
-  height: 100vh;
+  height: 100%;
   transition: transform 0.6s;
   will-change: transform;
-}
-@media screen and (max-width: 768px) {
-  .maincontent {
-    height: 100%;
-  }
 }
 
 .title {
