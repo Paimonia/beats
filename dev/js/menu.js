@@ -1,14 +1,41 @@
-const hamburger = document.querySelector("#hamburger");
-const close = document.querySelector("#close");
-const element = document.querySelector(".popup-menu");
-const body = $('body');
+const menuBlock = $(".popup-menu");
+const activeClass = "active";
+const hamburger = $("#hamburger");
 
-hamburger.addEventListener("click", function () {
-  element.style.display = "flex";
-  body.addClass("hidden");
+const showMenuBlock = () => {
+  menuBlock.addClass(activeClass);
+  hamburger.addClass(activeClass);
+};
 
+const hideMenuBlock = () => {
+  menuBlock.removeClass(activeClass);
+  hamburger.removeClass(activeClass);
+};
+
+const preventDefault = e => e.preventDefault();
+
+const disableScroll = () => {
+  document.addEventListener("wheel", preventDefault, { passive: false });
+};
+
+const enableScroll = () => {
+  document.removeEventListener("wheel", preventDefault, { passive: false });
+};
+
+$("#hamburger").click(e => {
+  e.preventDefault();
+  showMenuBlock();
+  disableScroll();
 });
-close.addEventListener("click", function () {
-  element.style.display = "none";
-  body.removeClass("hidden");
+
+$(".popup-menu__close").click(e => {
+  e.preventDefault();
+  hideMenuBlock();
+  enableScroll();
+});
+
+$(".main-menu__link").click(e => {
+  e.preventDefault();
+  hideMenuBlock();
+  enableScroll();
 });
