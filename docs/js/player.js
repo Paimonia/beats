@@ -1,14 +1,21 @@
 let player;
 const playerContainer = $(".player");
- 
+const button = $(".player__playback-button");
+const buttonPaddLeft = parseInt(button.css("padding-left"));
+const buttonPaddRight = parseInt(button.css("padding-right"));
+const buttonWidth = ($(".player__playback-button").width() + buttonPaddLeft + buttonPaddRight) / 2;
+
+
 let eventsInit = () => {
  $(".player__start").click(e => {
    e.preventDefault();
- 
+   $(".player__playback-button").addClass("active");
    if (playerContainer.hasClass("paused")) {
      player.pauseVideo();
+     $(".player__start").removeClass("active");
    } else {
      player.playVideo();
+     $(".player__start").addClass("active");
    }
  });
  
@@ -20,14 +27,21 @@ let eventsInit = () => {
      (player.getDuration() / 100) * newButtonPositionPercent;
  
    $(".player__playback-button").css({
-     left: `${newButtonPositionPercent}%`
+     
+     "margin-left": `calc(${newButtonPositionPercent}% - ${buttonWidth}px)`
    });
- 
+   $(".player__playback-active").css({
+     
+    "width": `calc(${newButtonPositionPercent}% - ${buttonWidth}px)`
+  });
+
    player.seekTo(newPlaybackPositionSec);
  });
  
  $(".player__splash").click(e => {
    player.playVideo();
+   $(".player__playback-button").addClass("active");
+   $(".player__start").addClass("active");
  })
 };
  
@@ -59,8 +73,12 @@ const onPlayerReady = () => {
    const completedPercent = (completedSec / durationSec) * 100;
  
    $(".player__playback-button").css({
-     left: `${completedPercent}%`
+    "margin-left": `calc(${completedPercent}% - ${buttonWidth}px)`
    });
+
+   $(".player__playback-active").css({
+    "width": `calc(${completedPercent}% - ${buttonWidth}px)`
+  });
  
    $(".player__duration-completed").text(formatTime(completedSec));
  }, 1000);
@@ -79,11 +97,13 @@ const onPlayerStateChange = event => {
    case 1:
      playerContainer.addClass("active");
      playerContainer.addClass("paused");
+     $(".player__start").addClass("active");
      break;
  
    case 2:
      playerContainer.removeClass("active");
      playerContainer.removeClass("paused");
+     $(".player__start").removeClass("active");
      break;
  }
 };

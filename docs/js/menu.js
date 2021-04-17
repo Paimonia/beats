@@ -33,3 +33,9 @@ $(".popup-menu__close").click(e => {
   hideMenuBlock();
   enableScroll();
 });
+
+$(".main-menu__link").click(e => {
+  e.preventDefault();
+  hideMenuBlock();
+  enableScroll();
+});
