@@ -1717,7 +1717,7 @@ svg {
 }
 
 .modal__button {
-  display: block;
+  display: inline-block;
   margin: 15px auto 0 auto;
 }
 
