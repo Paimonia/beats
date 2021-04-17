@@ -39,16 +39,18 @@
     }
 }
 
-.main-menu__close {
+.popup-menu__close {
     position:absolute;
-    top: rem(30px);
-    right: rem(15px);
+    top: rem(32px);
     display: none;
+    
     @include tablets {
         display: block;
+        right: calc(2.5% + 1.5px);
     }
     @include phones {
         display: block;
+        right: calc(2.5% + 11.5px);
     }
 }
 
@@ -99,4 +101,7 @@
     align-items: center;
     background: #313131;
     z-index:999;
+}
+.popup-menu.active {
+    display: flex;
 }

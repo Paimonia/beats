@@ -1,11 +1,11 @@
 .hamburger {
+    
+    z-index:9999;
     display: none;
     @include tablets {
         display: block;
     } 
-    @include phones {
-        display: block;
-    } 
+
 }
 .hamburger__line {
     display: block;

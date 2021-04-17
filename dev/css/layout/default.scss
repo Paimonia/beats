@@ -8,6 +8,7 @@ html {
     @include phones {
         font-size: $fontsize - 2px;
     }
+    height:100%;
 }
 
 
@@ -20,8 +21,8 @@ body {
     color:$grey;
     margin:0;
     padding:0;
-    //height:100%;
-    //overflow: hidden;
+    height:100%;
+    overflow: hidden;
 }
 
 * {box-sizing:border-box; outline:none;
@@ -60,26 +61,14 @@ svg {
 }
 
 .section {
-
-    height:100vh;
-    min-height: rem(650px);
-
-    @include tablets {
-        min-height: rem(1000px);
-    }
-    @include phones {
-        min-height: 800px;
-    }
+    height:100%;
+    
 }
 
 .hidden {
     overflow: hidden;
 }
-.section--big {
-    @include phones {
-        min-height: rem(950px);
-    }
-}
+
 .container {
     width:95%;
     min-width:320px;
@@ -94,13 +83,13 @@ svg {
     position:relative;
     display:flex;
     flex-direction: column;
-    //height:100%;
-    //overflow: hidden;
+    height:100%;
+    overflow: hidden;
     
 }
 
 .maincontent {
-    //height:100vh;
+    height:100%;
     transition: transform 0.6s;
     will-change: transform;
 }

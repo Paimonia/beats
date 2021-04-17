@@ -22,6 +22,7 @@
     margin-bottom: rem(12px);
     @include phones {
         font-size: rem(38px);
+        padding:0 10px;
     }
 }
 
@@ -39,6 +40,7 @@
         
         width:95%;
         line-height: 1.3;
+        padding:0 10px;
         }
 }
 

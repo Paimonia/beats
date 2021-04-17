@@ -8,6 +8,10 @@
 }
 .products__container {
     height:100%;
+    @include phones {
+        
+        padding:0 10px;
+    }
 }
 .products__title {
     padding-top: rem(115px);
@@ -40,6 +44,9 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom:rem(35px);
+    @include phones {
+        width:50px;
+    }
     }
 
 .products__name {
@@ -48,6 +55,9 @@
     line-height:100px;
     transform: rotate(270deg);
     white-space: nowrap;
+    @include phones {
+        font-size: rem(18px);
+    }
 }
 .products__desc {
     width:0;
@@ -59,4 +69,5 @@
 }
 .products__text {
     padding:30px;
+    font-size: rem(14px);
 }
